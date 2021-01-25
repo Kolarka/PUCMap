@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Taxi">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#F2C94C"
+        android:id="@+id/lil1" >
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:background="#F2C94C"
+            android:src="@drawable/ic_next"
+            android:id="@+id/Im2"
+            tools:ignore="ContentDescription">
+        </ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/taxi"
+            android:textColor="#FAF7F7"
+            android:textSize="20sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp">
+        </TextView>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lil1"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:id="@+id/taxi_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            tools:context=".MainActivity"
+            android:background="@drawable/taxi_background" >
+
+            <RelativeLayout
+                android:id="@+id/taxi_back_item1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                tools:context=".MainActivity"
+                android:background="@drawable/taxi_background_item" >
+
+                <TextView
+                    android:id="@+id/tv_pula"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:text="@string/taxi_pula" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_pula" >
+                    <RelativeLayout
+                        android:id="@+id/opis_pula"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content" >
+                        <TextView
+                            android:id="@+id/naruci1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="10dp"
+                            android:text="@string/naru_i_pozivom" />
+                        <ImageView
+                            android:id="@+id/mob_icon1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/naruci1"
+                            android:layout_marginTop="35dp"
+                            android:src="@drawable/ic_phone_android_72dp"
+                            tools:ignore="ContentDescription" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#ffffff"
+                        android:layout_toEndOf="@id/opis_pula" >
+                        <TextView
+                            android:id="@+id/telefon1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="15dp"
+                            android:textSize="16sp"
+                            android:text="@string/_385_52_313_313" />
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/taxi_price"
+                            android:padding="16dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_below="@id/telefon1" >
+                            <TextView
+                                android:id="@+id/pocetna_cijena"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="#ffffff"
+                                android:text="@string/po_etna_cijena" />
+                            <TextView
+                                android:id="@+id/cijena"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:layout_below="@id/pocetna_cijena"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="#ffffff"
+                                android:text="@string/_6_kn" />
+                            <TextView
+                                android:id="@+id/cijena_po_km"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:layout_below="@id/cijena"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="#ffffff"
+                                android:text="@string/cijena_po_km" />
+                            <TextView
+                                android:id="@+id/cijena_km"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:layout_below="@id/cijena_po_km"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="#ffffff"
+                                android:text="@string/_10_kn" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/taxi_back_item2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/taxi_back_item1"
+                android:padding="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                tools:context=".MainActivity"
+                android:background="@drawable/taxi_background_item" >
+
+                <TextView
+                    android:id="@+id/cammeo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="@string/taxi_cammeo" />
+
+                <TextView
+                    android:id="@+id/naruci2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cammeo"
+                    android:text="@string/naru_i_pozivom" />
+
+                <ImageView
+                    android:id="@+id/mob_icon2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/naruci2"
+                    android:src="@drawable/ic_phone_android_72dp"
+                    tools:ignore="ContentDescription" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/taxi_back_item3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/taxi_back_item2"
+                android:padding="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                tools:context=".MainActivity"
+                android:background="@drawable/taxi_background_item" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="@string/eko_taxi" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+
+</RelativeLayout>
+
+
