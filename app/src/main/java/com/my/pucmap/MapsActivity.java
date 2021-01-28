@@ -14,7 +14,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import static com.my.pucmap.R.id.directions_bike_button;
+
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, View.OnClickListener {
 
@@ -34,7 +34,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        directions_bike = findViewById(directions_bike_button);
+        directions_bike = findViewById(R.id.directions_bike_button);
         directions_bike.setOnClickListener(this);
         directions_bus = findViewById(R.id.directions_bus_button);
         directions_bus.setOnClickListener(this);

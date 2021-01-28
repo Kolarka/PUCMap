@@ -3,20 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Bike">
-
+    tools:context=".Slots">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:background="#F2994A"
-        android:id="@+id/relLayout222"
-        tools:ignore="UselessParent">
+        android:background="#27AE60"
+        android:id="@+id/relLayout_slots">
 
         <ImageButton
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginStart="10dp"
-            android:background="#F2994A"
+            android:background="#27AE60"
             android:src="@drawable/ic_next"
             android:id="@+id/Im1"
             tools:ignore="ContentDescription">
@@ -25,10 +23,10 @@
         </ImageButton>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_toEndOf="@id/Im1"
-            android:text="@string/bike"
+            android:text="@string/slotss"
             android:textSize="20sp"
             android:textColor="#fff"
             android:layout_marginTop="15dp"
@@ -42,14 +40,11 @@
     </RelativeLayout>
 
     <fragment
-        android:layout_below="@id/relLayout222"
+        android:layout_below="@id/relLayout_slots"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:id="@+id/map_bike"
+        android:layout_height="match_parent"
+        android:id="@+id/map_zone_two"
         tools:context=".MapsActivity"
         android:name="com.google.android.gms.maps.SupportMapFragment" />
-
-
-
 
 </RelativeLayout>

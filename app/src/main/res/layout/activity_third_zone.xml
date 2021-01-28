@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Third_zone">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#C4C4C4"
+        android:id="@+id/relLayout_zone_three">
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:background="#C4C4C4"
+            android:src="@drawable/ic_next"
+            android:id="@+id/Im1"
+            tools:ignore="ContentDescription">
+
+
+        </ImageButton>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/Im1"
+            android:text="@string/_3_zoneee"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/text_v4"
+            >
+
+        </TextView>
+    </RelativeLayout>
+    <fragment
+        android:layout_below="@id/relLayout_zone_three"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:id="@+id/map_zone_two"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+    <ScrollView
+        android:layout_below="@id/map_zone_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/cijena_parkinga"
+                android:text="@string/cijena_parkinga_1h"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:id="@+id/kn_15"
+                android:layout_below="@id/cijena_parkinga"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/_15_kn"
+                android:textSize="20sp"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/naknada_park"
+                android:layout_below="@id/kn_15"
+                android:layout_width="350dp"
+                android:text="@string/naknada_za_parkiranje"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:id="@+id/naplata1"
+                android:text="@string/naplata_od"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                android:layout_below="@id/naknada_park"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/date_1"
+                android:text="@string/_01_01_31_05_07_00_20_00_sati"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                android:layout_below="@id/naplata1"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/date_2"
+                android:text="@string/_01_06_30_09_07_00_22_00_sata"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                android:layout_below="@id/date_1"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/date_3"
+                android:text="@string/_01_10_31_12_07_00_20_00_sati"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                android:layout_below="@id/date_2"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/day_pay"
+                android:text="@string/day_pay3"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                android:layout_below="@id/date_3"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:id="@+id/reg_number"
+                android:text="@string/reg_n_call3"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:textSize="15sp"
+                android:layout_below="@id/day_pay"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <ImageView
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_phone_android_72dp"
+                android:layout_below="@id/reg_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="ContentDescription">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

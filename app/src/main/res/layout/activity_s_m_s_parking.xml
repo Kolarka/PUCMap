@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SMS_parking">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#5AA5E2"
+        android:id="@+id/relLayout11">
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:background="#5AA5E2"
+            android:src="@drawable/ic_next"
+            android:id="@+id/Im1"
+            tools:ignore="ContentDescription">
+
+
+        </ImageButton>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/Im1"
+            android:text="@string/sms_parking_22"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/text_v1"
+            >
+
+        </TextView>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_below="@id/relLayout11"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:background="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/rel_lay1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+                <TextView
+                    android:layout_marginTop="50dp"
+                    android:id="@+id/zona_1_txt"
+                    android:layout_width="300dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_1_zona"
+                    android:textStyle="bold"
+                    android:textSize="20sp">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/poslajite_reg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/zona_1_txt"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/po_aljite_registraciju_na_broj_708521"
+                    android:layout_width="300dp"
+                    android:textSize="17sp"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <ImageView
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_phone_android_72dp"
+                    android:layout_below="@id/poslajite_reg"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="ContentDescription">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@id/rel_lay1"
+                android:id="@+id/rel_lay2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+                <TextView
+                    android:layout_marginTop="50dp"
+                    android:id="@+id/zona_2_txt"
+                    android:layout_width="300dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_2_zona"
+                    android:textStyle="bold"
+                    android:textSize="20sp">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/poslajite_reg2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/zona_2_txt"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/po_aljite_registraciju_na_broj_708522"
+                    android:layout_width="300dp"
+                    android:textSize="17sp"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <ImageView
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_phone_android_72dp"
+                    android:layout_below="@id/poslajite_reg2"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="ContentDescription">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_lay3"
+                android:layout_below="@id/rel_lay2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+                <TextView
+                    android:layout_marginTop="50dp"
+                    android:id="@+id/zona_3_txt"
+                    android:layout_width="300dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_3_zona"
+                    android:textStyle="bold"
+                    android:textSize="20sp">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/poslajite_reg3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/zona_3_txt"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/po_aljite_registraciju_na_broj_708523"
+                    android:layout_width="300dp"
+                    android:textSize="17sp"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <ImageView
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_phone_android_72dp"
+                    android:layout_below="@id/poslajite_reg3"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="ContentDescription">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

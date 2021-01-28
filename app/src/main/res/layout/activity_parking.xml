@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Parking">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -61,12 +62,14 @@
         android:textAlignment="center"
         android:textColor="#fff"
         android:textSize="20sp"
-        android:textStyle="bold">
+        android:textStyle="bold"
+        app:rippleColor="#F44336">
 
     </Button>
 
     <Button
-        android:id="@+id/secund_zone"
+        android:id="@+id/second_zone"
+        style="@android:style/Widget.Button"
         android:layout_width="160dp"
         android:layout_height="50dp"
         android:layout_below="@id/first_zone"
@@ -78,7 +81,8 @@
         android:textAlignment="center"
         android:textColor="#fff"
         android:textSize="20sp"
-        android:textStyle="bold">
+        android:textStyle="bold"
+        app:rippleColor="#4CAF50">
 
     </Button>
 
@@ -86,7 +90,7 @@
         android:id="@+id/third_zone"
         android:layout_width="160dp"
         android:layout_height="50dp"
-        android:layout_below="@id/secund_zone"
+        android:layout_below="@id/second_zone"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/grey_border"
@@ -117,7 +121,7 @@
     </Button>
 
     <Button
-        android:id="@+id/automat"
+        android:id="@+id/slots_btn"
         android:layout_width="160dp"
         android:layout_height="50dp"
         android:layout_below="@id/SMS_parking"
@@ -132,4 +136,6 @@
         android:textStyle="bold">
 
     </Button>
+
+
 </RelativeLayout>
