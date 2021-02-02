@@ -15,7 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Zzz">
-        <activity android:name=".Slots"></activity>
+        <activity android:name=".Get_Me_Somewhere"></activity>
+        <activity android:name=".Get_Me_Work" />
+        <activity android:name=".Get_Me_Home" />
+        <activity android:name=".Slots" />
         <activity android:name=".Third_zone" />
         <activity android:name=".Second_zone" />
         <activity android:name=".First_zone" />

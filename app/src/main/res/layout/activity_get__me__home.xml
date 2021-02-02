@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Get_Me_Home">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#F2994A"
+        android:id="@+id/relLayout363">
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:background="#F2994A"
+            android:src="@drawable/ic_next"
+            android:id="@+id/Im1"
+            tools:ignore="ContentDescription">
+
+
+        </ImageButton>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/Im1"
+            android:text="@string/set_home"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/text_v1"
+            >
+
+        </TextView>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rel1234"
+        android:background="@color/white"
+        android:layout_below="@id/relLayout363"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <AutoCompleteTextView
+            android:background="@color/white"
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+    </RelativeLayout>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="55dp"
+        android:id="@+id/map_set_home"
+        android:layout_below="@id/rel1234"
+        android:name="com.google.android.gms.maps.SupportMapFragment" >
+
+    </fragment>
+    <RelativeLayout
+        android:layout_below="@id/map_set_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_cur_loc"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="3dp"
+            android:src="@drawable/ic_baseline_my_location_24"
+            tools:ignore="ContentDescription">
+
+        </ImageView>
+
+        <TextView
+            android:layout_toEndOf="@id/img_cur_loc"
+            android:text="@string/use_current_location"
+            android:textColor="#319BAC"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

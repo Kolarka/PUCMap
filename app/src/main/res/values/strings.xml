@@ -81,4 +81,6 @@
     <string name="day_pay3">DNEVNA KARTA 160,00 kn</string>
     <string name="reg_n_call3">Pošaljite registraciju na broj 708523</string>
     <string name="slotss">Slots</string>
+    <string name="set_home">Set Home</string>
+    <string name="use_current_location">Use current location</string>
 </resources>

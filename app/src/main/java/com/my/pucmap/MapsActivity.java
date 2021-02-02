@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -24,6 +25,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private ImageButton local_parking;
     private ImageButton local_taxi;
     private ImageButton directions_boat;
+    private RelativeLayout get_home;
+    private RelativeLayout get_work;
+    private RelativeLayout get_me_some;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +48,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         local_taxi.setOnClickListener(this);
         directions_boat = findViewById(R.id.directions_boat_button);
         directions_boat.setOnClickListener(this);
+        get_home = findViewById(R.id.get_me_home);
+        get_home.setOnClickListener(this);
+        get_work = findViewById(R.id.get_me_work);
+        get_work.setOnClickListener(this);
+        get_me_some = findViewById(R.id.relLayout);
+        get_me_some.setOnClickListener(this);
 
 
     }
@@ -75,7 +85,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             case R.id.directions_bike_button:
                 startActivity(new Intent(MapsActivity.this, Bike.class));
                 break;
-
             case R.id.directions_bus_button:
                 startActivity(new Intent(MapsActivity.this, Bus.class));
                 break;
@@ -88,6 +97,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             case R.id.directions_boat_button:
                 startActivity(new Intent(MapsActivity.this, Boat.class));
                 break;
+            case R.id.get_me_home:
+                startActivity(new Intent(MapsActivity.this, Get_Me_Home.class));
+                break;
+            case R.id.get_me_work:
+                startActivity(new Intent(MapsActivity.this, Get_Me_Work.class));
+                break;
+            case R.id.relLayout:
+                startActivity(new Intent(MapsActivity.this, Get_Me_Somewhere.class));
+                break;
+
 
         }
     }
