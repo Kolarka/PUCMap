@@ -43,8 +43,8 @@
         android:layout_below="@id/relLayout_slots"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/map_zone_two"
-        tools:context=".MapsActivity"
+        android:id="@+id/map_slot"
+        tools:context=".Slots"
         android:name="com.google.android.gms.maps.SupportMapFragment" />
 
 </RelativeLayout>

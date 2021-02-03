@@ -1,13 +1,21 @@
 package com.my.pucmap;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Parking extends AppCompatActivity implements View.OnClickListener {
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+
+public class Parking extends FragmentActivity implements View.OnClickListener, OnMapReadyCallback {
+    private GoogleMap parking_map;
     private Button zone_one;
     private Button zone_two;
     private Button zone_three;
@@ -17,6 +25,10 @@ public class Parking extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parking);
+
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map_parking);
+        mapFragment.getMapAsync(this);
 
         zone_one = findViewById(R.id.first_zone);
         zone_one.setOnClickListener(this);
@@ -30,6 +42,15 @@ public class Parking extends AppCompatActivity implements View.OnClickListener {
         slots.setOnClickListener(this);
     }
 
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        parking_map = googleMap;
+
+        // Add a marker in Sydney and move the camera
+        LatLng pula = new LatLng(44.86726450096342, 13.850460687162476);
+        parking_map.moveCamera(CameraUpdateFactory.newLatLngZoom(pula, 13));
+
+    }
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -50,4 +71,6 @@ public class Parking extends AppCompatActivity implements View.OnClickListener {
                 break;
         }
     }
+
+
 }

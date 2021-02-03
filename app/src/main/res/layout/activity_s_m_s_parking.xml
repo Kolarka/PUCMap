@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SMS_parking">
+    
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="55dp"
@@ -60,6 +61,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/_1_zona"
                     android:textStyle="bold"
+                    android:textColor="#81817A"
                     android:textSize="20sp">
 
                 </TextView>
@@ -70,6 +72,7 @@
                     android:layout_marginTop="15dp"
                     android:text="@string/po_aljite_registraciju_na_broj_708521"
                     android:layout_width="300dp"
+                    android:textColor="#81817A"
                     android:textSize="17sp"
                     android:layout_height="wrap_content">
 
@@ -98,6 +101,7 @@
                     android:layout_width="300dp"
                     android:layout_centerHorizontal="true"
                     android:layout_height="wrap_content"
+                    android:textColor="#81817A"
                     android:text="@string/_2_zona"
                     android:textStyle="bold"
                     android:textSize="20sp">
@@ -108,6 +112,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_below="@id/zona_2_txt"
                     android:layout_marginTop="15dp"
+                    android:textColor="#81817A"
                     android:text="@string/po_aljite_registraciju_na_broj_708522"
                     android:layout_width="300dp"
                     android:textSize="17sp"
@@ -138,6 +143,7 @@
                     android:layout_width="300dp"
                     android:layout_centerHorizontal="true"
                     android:layout_height="wrap_content"
+                    android:textColor="#81817A"
                     android:text="@string/_3_zona"
                     android:textStyle="bold"
                     android:textSize="20sp">
@@ -149,6 +155,7 @@
                     android:layout_below="@id/zona_3_txt"
                     android:layout_marginTop="15dp"
                     android:text="@string/po_aljite_registraciju_na_broj_708523"
+                    android:textColor="#81817A"
                     android:layout_width="300dp"
                     android:textSize="17sp"
                     android:layout_height="wrap_content">

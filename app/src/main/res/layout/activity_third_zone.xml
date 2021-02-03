@@ -40,12 +40,13 @@
         android:layout_below="@id/relLayout_zone_three"
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:id="@+id/map_zone_two"
-        tools:context=".MapsActivity"
+        android:id="@+id/map_zone_three"
+        tools:context=".Third_zone"
         android:name="com.google.android.gms.maps.SupportMapFragment" />
 
     <ScrollView
-        android:layout_below="@id/map_zone_two"
+        android:background="@color/white"
+        android:layout_below="@id/map_zone_three"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <RelativeLayout
@@ -54,6 +55,7 @@
             <TextView
                 android:id="@+id/cijena_parkinga"
                 android:text="@string/cijena_parkinga_1h"
+                android:textColor="#81817A"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginStart="20dp"
@@ -67,6 +69,7 @@
                 android:layout_below="@id/cijena_parkinga"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="15dp"
+                android:textColor="#81817A"
                 android:text="@string/_15_kn"
                 android:textSize="20sp"
                 android:layout_width="350dp"
@@ -78,6 +81,7 @@
                 android:id="@+id/naknada_park"
                 android:layout_below="@id/kn_15"
                 android:layout_width="350dp"
+                android:textColor="#81817A"
                 android:text="@string/naknada_za_parkiranje"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="15dp"
@@ -88,6 +92,7 @@
             <TextView
                 android:id="@+id/naplata1"
                 android:text="@string/naplata_od"
+                android:textColor="#81817A"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="15dp"
                 android:textSize="15sp"
@@ -99,6 +104,7 @@
 
             <TextView
                 android:id="@+id/date_1"
+                android:textColor="#81817A"
                 android:text="@string/_01_01_31_05_07_00_20_00_sati"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="15dp"
@@ -111,6 +117,7 @@
 
             <TextView
                 android:id="@+id/date_2"
+                android:textColor="#81817A"
                 android:text="@string/_01_06_30_09_07_00_22_00_sata"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="15dp"
@@ -123,6 +130,7 @@
 
             <TextView
                 android:id="@+id/date_3"
+                android:textColor="#81817A"
                 android:text="@string/_01_10_31_12_07_00_20_00_sati"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="15dp"
@@ -135,6 +143,7 @@
 
             <TextView
                 android:id="@+id/day_pay"
+                android:textColor="#81817A"
                 android:text="@string/day_pay3"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="15dp"
@@ -148,6 +157,7 @@
             <TextView
                 android:gravity="center_horizontal"
                 android:id="@+id/reg_number"
+                android:textColor="#81817A"
                 android:text="@string/reg_n_call3"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="30dp"
