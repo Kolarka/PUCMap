@@ -32,6 +32,7 @@
     </LinearLayout>
 
     <ScrollView
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/lil1"
@@ -87,6 +88,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:paddingTop="10dp"
+                            android:textColor="#81817A"
                             android:text="@string/naru_i_pozivom" />
 
                         <ImageView
@@ -111,6 +113,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:paddingTop="15dp"
+                            android:textColor="#81817A"
                             android:text="@string/_385_52_313_313"
                             android:textSize="16sp" />
 
@@ -209,6 +212,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:paddingTop="20dp"
+                        android:textColor="#81817A"
                         android:text="@string/naru_i_pozivom" />
 
                     <ImageView
@@ -235,6 +239,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:paddingTop="15dp"
+                        android:textColor="#81817A"
                         android:text="@string/_385_52_313_313"
                         android:textSize="16sp" />
 
@@ -331,6 +336,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:paddingTop="20dp"
+                        android:textColor="#81817A"
                         android:text="@string/naru_i_pozivom" />
 
                     <ImageView
@@ -357,6 +363,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:paddingTop="15dp"
+                        android:textColor="#81817A"
                         android:text="@string/_385_52_313_313"
                         android:textSize="16sp" />
 
