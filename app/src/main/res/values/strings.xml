@@ -47,15 +47,14 @@
     <string name="eko_taxi">Eko Taxi</string>
     <string name="bus_lines">Bus Lines</string>
     <string name="_1">1</string>
-    <string name="bus_kolodvor_stoja">BUS KOLODVOR-STOJA</string>
-    <string name="stoja_bus_kolodvor">STOJA-BUS KOLODVOR</string>
-    <string name="bus_kolodvor_veruda_verudela">BUS KOLODVOR-VERUDA-VERUDELA</string>
-    <string name="verudela_vidikovac_ijanska_uma">VERUDELA-VIDIKOVAC-ŠIJANSKA ŠUMA</string>
+    <string name="bus_kolodvor_stoja">BUS KOLODVOR - STOJA</string>
+    <string name="stoja_bus_kolodvor">STOJA - BUS KOLODVOR</string>
+    <string name="bus_kolodvor_veruda_verudela">BUS KOLODVOR - VERUDA - VERUDELA</string>
+    <string name="verudela_vidikovac_ijanska_uma">VERUDELA - VIDIKOVAC - ŠIJANSKA ŠUMA</string>
     <string name="_2a">2a</string>
-    <string name="direction_a">Direction A</string>
-    <string name="ijanska_uma_vidikovac_verudela">ŠIJANSKA ŠUMA-VIDIKOVAC-VERUDELA</string>
+    <string name="ijanska_uma_vidikovac_verudela">ŠIJANSKA ŠUMA - VIDIKOVAC - VERUDELA</string>
     <string name="direction_b">Direction B</string>
-    <string name="verudela_veruda_bus_kolodvor">VERUDELA-VERUDA-BUS KOLODVOR</string>
+    <string name="verudela_veruda_bus_kolodvor">VERUDELA - VERUDA - BUS KOLODVOR</string>
     <string name="_1_zona">1. ZONA</string>
     <string name="_2_zona">2. ZONA</string>
     <string name="_3_zona">3. ZONA</string>
@@ -83,4 +82,8 @@
     <string name="slotss">Slots</string>
     <string name="set_home">Set Home</string>
     <string name="use_current_location">Use current location</string>
+    <string name="stoja_bus_station">STOJA - BUS STATION</string>
+    <string name="direction_a_btn1">Direction A</string>
+    <string name="direction_b_BTN1">Direction B</string>
+    <string name="direction_a">Direction A</string>
 </resources>

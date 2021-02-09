@@ -78,6 +78,12 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="140dp"
                 android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="20dp"
@@ -93,9 +99,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="37dp"
                     android:layout_marginTop="30dp"
+                    android:textColor="#494747"
+                    android:textSize="12sp"
                     android:text="@string/bus_kolodvor_stoja">
 
                 </TextView>
+                </RelativeLayout>
 
                 <TextView
                     android:layout_width="100dp"
@@ -112,6 +121,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="37dp"
                     android:layout_marginTop="80dp"
+                    android:textColor="#494747"
+                    android:textSize="12sp"
                     android:text="@string/stoja_bus_kolodvor">
 
                 </TextView>
@@ -174,6 +185,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="37dp"
                     android:layout_marginTop="30dp"
+                    android:textColor="#494747"
+                    android:textSize="12sp"
                     android:text="@string/bus_kolodvor_veruda_verudela">
 
                 </TextView>
@@ -193,6 +206,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="37dp"
                     android:layout_marginTop="80dp"
+                    android:textColor="#494747"
+                    android:textSize="12sp"
                     android:text="@string/verudela_vidikovac_ijanska_uma">
 
                 </TextView>
@@ -257,6 +272,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="37dp"
                     android:layout_marginTop="30dp"
+                    android:textColor="#494747"
+                    android:textSize="12sp"
                     android:text="@string/ijanska_uma_vidikovac_verudela">
 
                 </TextView>
@@ -276,15 +293,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="37dp"
                     android:layout_marginTop="80dp"
+                    android:textColor="#494747"
+                    android:textSize="12sp"
                     android:text="@string/verudela_veruda_bus_kolodvor">
 
                 </TextView>
             </RelativeLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#7E7D7D"
-                android:layout_marginTop="150dp"/>
+
         </RelativeLayout>
 
     </RelativeLayout>

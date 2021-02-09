@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Bike">
 
     <RelativeLayout
@@ -44,12 +45,77 @@
     <fragment
         android:layout_below="@id/relLayout222"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="450dp"
         android:id="@+id/map_bike"
         tools:context=".MapsActivity"
         android:name="com.google.android.gms.maps.SupportMapFragment" />
+ <RelativeLayout
+     android:layout_below="@id/map_bike"
+     android:background="@color/white"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
 
+     <RelativeLayout
+         android:layout_marginTop="10dp"
+         android:id="@+id/layout_one"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+
+
+          <ImageView
+             android:id="@+id/ic_rent_id"
+             android:src="@drawable/ic_rent"
+             android:layout_width="50dp"
+             android:layout_height="50dp">
+
+         </ImageView>
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentTop="true"
+         android:layout_marginStart="17dp"
+         android:layout_marginTop="11dp"
+         android:layout_toEndOf="@id/ic_rent_id"
+         android:text="Rent a bike"
+         android:textAlignment="center"
+         android:textColor="@color/black"
+         android:textSize="20sp">
+
+     </TextView>
+     </RelativeLayout>
+
+     <RelativeLayout
+         android:layout_marginBottom="15dp"
+         android:layout_below="@id/layout_one"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+     <ImageView
+         android:id="@+id/shop_bik"
+         android:src="@drawable/ic_bikebuy"
+         android:layout_width="50dp"
+         android:layout_height="50dp">
+
+     </ImageView>
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentTop="true"
+         android:layout_marginStart="17dp"
+         android:layout_marginTop="11dp"
+         android:layout_toEndOf="@id/shop_bik"
+         android:text="Shop bike"
+         android:textAlignment="center"
+         android:textColor="@color/black"
+         android:textSize="20sp">
+
+     </TextView>
+ </RelativeLayout>
+
+ </RelativeLayout>
 
 
 
 </RelativeLayout>
+

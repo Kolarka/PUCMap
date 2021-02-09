@@ -14,7 +14,6 @@ import com.google.android.gms.maps.model.Polygon;
 import com.google.android.gms.maps.model.PolygonOptions;
 
 public class Third_zone extends FragmentActivity implements OnMapReadyCallback {
-    private GoogleMap map_third_z;
     private final static int Grey_COL = 0xFF808080;
     private final static int Grey_TRANS = 0xFFEDEDED;
 
@@ -30,7 +29,6 @@ public class Third_zone extends FragmentActivity implements OnMapReadyCallback {
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        map_third_z = googleMap;
 
 
         Polygon pol1 = googleMap.addPolygon(new PolygonOptions()
