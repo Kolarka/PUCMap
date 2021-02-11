@@ -48,7 +48,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:id="@+id/relLay" >
+            android:id="@+id/lay_stoj_kol" >
 
             <RelativeLayout
                 android:layout_width="100dp"
