@@ -82,7 +82,7 @@
     <string name="slotss">Slots</string>
     <string name="set_home">Set Home</string>
     <string name="use_current_location">Use current location</string>
-    <string name="stoja_bus_station">STOJA - BUS STATION</string>
+    <string name="stoja_bus_station">BUS STATION - STOJA</string>
     <string name="direction_a_btn1">Direction A</string>
     <string name="direction_b_BTN1">Direction B</string>
     <string name="direction_a">Direction A</string>
@@ -114,4 +114,9 @@
     <string name="time23">22</string>
     <string name="time24">23</string>
     <string name="time25">00</string>
+    <string name="stoja_bus_stati">STOJA - BUS STATION</string>
+    <string name="_30">30</string>
+    <string name="_00">00</string>
+    <string name="_50">50</string>
+    <string name="_10">10</string>
 </resources>

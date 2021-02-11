@@ -133,6 +133,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:layout_marginBottom="15dp"
                 android:id="@+id/rel_lay3"
                 android:layout_below="@id/rel_lay2"
                 android:layout_width="match_parent"

@@ -1,75 +1,41 @@
 package com.my.pucmap;
 
-
-
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.Circle;
-import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 
-import java.util.ArrayList;
-import java.util.List;
+public class Stoja_kol extends FragmentActivity implements OnMapReadyCallback,
+        GoogleMap.OnPolylineClickListener, View.OnClickListener{
 
-public class Kol_stoja extends FragmentActivity implements OnMapReadyCallback,
-        GoogleMap.OnPolylineClickListener, View.OnClickListener {
-
-    private GoogleMap kol_sto_map;
     private final static int Greeen = 0xFF008000;
-    private Button direction_b;
-    private LatLng Bus_station = new LatLng(44.87697273602289, 13.85445352541264);
-    private RelativeLayout first_station;
-
-
-    private MarkerOptions Bustation_option;
-
-    private List<MarkerOptions> markerOptionsList;
+    private Button direction_a;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kol_stoja);
+        setContentView(R.layout.activity_stoja_kol);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map_kolstoja);
+                .findFragmentById(R.id.map_stojkol);
         mapFragment.getMapAsync(this);
 
-        direction_b = findViewById(R.id.Dir_B);
-        direction_b.setOnClickListener(this);
-        first_station = findViewById(R.id.rel_firststat);
-        first_station.setOnClickListener(this);
-
+        direction_a = findViewById(R.id.Dir_A);
+        direction_a.setOnClickListener(this);
     }
-
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        kol_sto_map = googleMap;
-        kol_sto_map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-
-
-        markerOptionsList = new ArrayList<>();
-
-        //green option parking slot
-        Bustation_option = new MarkerOptions().position(Bus_station)
-                .title("Bus station Pula")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
-
-        markerOptionsList.add(Bustation_option);
         // Add polylines to the map.
         // Polylines are useful to show a route or some other connection between points.
         Polyline polyline1 = googleMap.addPolyline(new PolylineOptions()
@@ -171,19 +137,13 @@ public class Kol_stoja extends FragmentActivity implements OnMapReadyCallback,
 
 
         //camera in Pula
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(44.8766990379954, 13.854485711920372), 13));
-
-        for (MarkerOptions options : markerOptionsList){
-            LatLng latLng = new LatLng(options.getPosition().latitude, options.getPosition().longitude);
-            kol_sto_map.addMarker(options);
-
-        }
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(44.86025417118449, 13.814587465671368), 13));
 
         // Set listeners for click events.
         googleMap.setOnPolylineClickListener(this);
 
-    }
 
+    }
     @Override
     public void onPolylineClick(Polyline polyline) {
 
@@ -191,14 +151,13 @@ public class Kol_stoja extends FragmentActivity implements OnMapReadyCallback,
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.Dir_B:
-                startActivity(new Intent(Kol_stoja.this, Stoja_kol.class));
-                break;
-            case R.id.rel_firststat:
-                kol_sto_map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(44.87701074953485, 13.854464254248551), 16));
+        switch (v.getId()) {
+            case R.id.Dir_A:
+                startActivity(new Intent(Stoja_kol.this, Kol_stoja.class));
                 break;
         }
 
     }
+
+
 }
