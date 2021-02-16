@@ -21,7 +21,7 @@
     <string name="pula_zadar">Pula-Zadar</string>
     <string name="_07_00">07:00</string>
     <string name="pula_brijuni">Pula-Brijuni</string>
-    <string name="korkyra">Korkyra</string>
+
     <string name="_12_00">12:00</string>
     <string name="pula_fratarski">Pula-Fratarski</string>
     <string name="odisej">Odisej</string>
@@ -121,4 +121,24 @@
     <string name="_10">10</string>
     <string name="bus_station_veruda_verudela">BUS STATION - VERUDA - VERUDELA</string>
     <string name="verudela_vidikovac_ijanska_uma">VERUDELA - VIDIKOVAC - ŠIJANSKA ŠUMA</string>
+    <string name="pu_zd">Pula - Zadar</string>
+    <string name="puLA">Pula</string>
+    <string name="polazak">Polazak</string>
+    <string name="_7_00">7:00</string>
+    <string name="unije">Unije</string>
+    <string name="_8_35">8:35</string>
+    <string name="_8_40">8:40</string>
+    <string name="susak">Susak</string>
+    <string name="_9_15">9:15</string>
+    <string name="_9_20">9:20</string>
+    <string name="dolazak">Dolazak</string>
+    <string name="dolaz">Dolazak</string>
+    <string name="silba">Silba</string>
+    <string name="mali_lo_inj">Mali Lošinj</string>
+    <string name="zadar_pula">Zadar - Pula</string>
+    <string name="zadar">Zadar</string>
+    <string name="ilovik">Ilovik</string>
+    <string name="pula_brijunii">Pula - Brijuni</string>
+    <string name="korkyra">Korkyra</string>
+    <string name="brijuni_pula">Brijuni - Pula</string>
 </resources>

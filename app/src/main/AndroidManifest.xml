@@ -16,7 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Zzz">
-        <activity android:name=".Pu_Ve"></activity>
+        <activity android:name=".Brij_Pu"></activity>
+        <activity android:name=".Zd_Pu" />
+        <activity android:name=".Pu_Ve" />
         <activity android:name=".Pu_Fra" />
         <activity android:name=".Pu_Brij" />
         <activity android:name=".Pu_Zd" />
