@@ -57,10 +57,16 @@
         </Button>
 
     </RelativeLayout>
+    <ScrollView
+        android:layout_below="@+id/dira_dirb"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
     <fragment
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:id="@+id/map_stojkol"
-        android:layout_below="@id/dira_dirb"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="300dp">
@@ -172,12 +178,10 @@
         </TextView>
 
     </RelativeLayout>
-    <ScrollView
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/det_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+
         <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/det_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <RelativeLayout
@@ -1404,6 +1408,7 @@
 
 
         </RelativeLayout>
+</RelativeLayout>
     </ScrollView>
 
 </RelativeLayout>

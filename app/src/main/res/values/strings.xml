@@ -50,7 +50,7 @@
     <string name="bus_kolodvor_stoja">BUS KOLODVOR - STOJA</string>
     <string name="stoja_bus_kolodvor">STOJA - BUS KOLODVOR</string>
     <string name="bus_kolodvor_veruda_verudela">BUS KOLODVOR - VERUDA - VERUDELA</string>
-    <string name="verudela_vidikovac_ijanska_uma">VERUDELA - VIDIKOVAC - ŠIJANSKA ŠUMA</string>
+
     <string name="_2a">2a</string>
     <string name="ijanska_uma_vidikovac_verudela">ŠIJANSKA ŠUMA - VIDIKOVAC - VERUDELA</string>
     <string name="direction_b">Direction B</string>
@@ -119,4 +119,6 @@
     <string name="_00">00</string>
     <string name="_50">50</string>
     <string name="_10">10</string>
+    <string name="bus_station_veruda_verudela">BUS STATION - VERUDA - VERUDELA</string>
+    <string name="verudela_vidikovac_ijanska_uma">VERUDELA - VIDIKOVAC - ŠIJANSKA ŠUMA</string>
 </resources>

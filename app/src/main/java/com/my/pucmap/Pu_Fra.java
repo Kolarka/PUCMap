@@ -1,15 +1,14 @@
 package com.my.pucmap;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
 
-public class Taxi extends FragmentActivity {
+public class Pu_Fra extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_taxi);
+        setContentView(R.layout.activity_pu__fra);
     }
 }

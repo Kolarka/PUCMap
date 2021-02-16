@@ -13,29 +13,28 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.Polyline;
 
-public class Kol_Verudela extends FragmentActivity implements OnMapReadyCallback,
+public class Verude_Kol extends FragmentActivity implements OnMapReadyCallback,
         View.OnClickListener, GoogleMap.OnPolylineClickListener {
-
-    private GoogleMap kol_verud;
-    private Button dir_b_verud;
+    private GoogleMap verud_sijd;
+    private Button dir_A_verudsij;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kol__verudela);
+        setContentView(R.layout.activity_verude__kol);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map_kolverud);
+                .findFragmentById(R.id.map_verudsij);
         mapFragment.getMapAsync(this);
 
-        dir_b_verud = findViewById(R.id.Dir_B);
-        dir_b_verud.setOnClickListener(this);
+        dir_A_verudsij = findViewById(R.id.Dir_A);
+        dir_A_verudsij.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.Dir_B:
-                startActivity(new Intent(Kol_Verudela.this, Verude_Kol.class));
+            case R.id.Dir_A:
+                startActivity(new Intent(Verude_Kol.this, Kol_Verudela.class));
                 break;
         }
 

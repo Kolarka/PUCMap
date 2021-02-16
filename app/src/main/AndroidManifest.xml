@@ -16,8 +16,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Zzz">
-        <activity android:name=".Stoja_kol"></activity>
-        <activity android:name=".Sijans_Verudela" />
+        <activity android:name=".Pu_Ve"></activity>
+        <activity android:name=".Pu_Fra" />
+        <activity android:name=".Pu_Brij" />
+        <activity android:name=".Pu_Zd" />
+        <activity android:name=".Verude_Kol" />
+        <activity android:name=".Stoja_kol" />
         <activity android:name=".Kol_Verudela" />
         <activity android:name=".Kol_stoja" />
         <activity android:name=".Get_Me_Somewhere" />

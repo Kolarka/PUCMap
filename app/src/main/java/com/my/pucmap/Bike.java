@@ -1,6 +1,7 @@
 package com.my.pucmap;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
 
@@ -15,7 +16,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Bike extends AppCompatActivity implements OnMapReadyCallback{
+public class Bike extends FragmentActivity implements OnMapReadyCallback{
     private GoogleMap bike_map;
     private LatLng rent1 = new LatLng(44.87238925238926, 13.850799480767304);
     private LatLng rent2 = new LatLng(44.872371194523964, 13.849194178676013);

@@ -12,7 +12,7 @@ import android.widget.RelativeLayout;
 public class Bus extends FragmentActivity implements View.OnClickListener {
     private RelativeLayout bus_one;
     private RelativeLayout bus_two;
-    private RelativeLayout bus_three;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +23,7 @@ public class Bus extends FragmentActivity implements View.OnClickListener {
         bus_one.setOnClickListener(this);
         bus_two = findViewById(R.id.rel_layout4);
         bus_two.setOnClickListener(this);
-        bus_three = findViewById(R.id.rel_layout_6);
-        bus_three.setOnClickListener(this);
+
 
     }
 
@@ -37,9 +36,7 @@ public class Bus extends FragmentActivity implements View.OnClickListener {
             case R.id.rel_layout4:
                 startActivity(new Intent(Bus.this, Kol_Verudela.class));
                 break;
-            case R.id.rel_layout_6:
-                startActivity(new Intent(Bus.this, Sijans_Verudela.class));
-                break;
+
         }
 
     }
