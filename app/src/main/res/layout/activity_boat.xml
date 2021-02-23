@@ -11,22 +11,12 @@
         android:background="#4083A9"
         android:id="@+id/relLayout11">
 
-        <ImageButton
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
-            android:background="#4083A9"
-            android:src="@drawable/ic_next"
-            android:id="@+id/Im_boatline"
-            tools:ignore="ContentDescription">
 
-
-        </ImageButton>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_toEndOf="@id/Im_boatline"
+           android:layout_marginStart="20dp"
             android:text="@string/boat_lines"
             android:textSize="20sp"
             android:textColor="#fff"

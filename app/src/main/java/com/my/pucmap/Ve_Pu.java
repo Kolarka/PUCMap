@@ -8,14 +8,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Brij_Pu extends FragmentActivity implements View.OnClickListener {
+public class Ve_Pu extends FragmentActivity implements View.OnClickListener {
+
     private Button dir_a;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_brij__pu);
+        setContentView(R.layout.activity_ve__pu);
 
         dir_a = findViewById(R.id.Dir_A);
         dir_a.setOnClickListener(this);
@@ -25,9 +24,8 @@ public class Brij_Pu extends FragmentActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.Dir_A:
-                startActivity(new Intent(Brij_Pu.this, Pu_Brij.class));
+                startActivity(new Intent(Ve_Pu.this, Pu_Ve.class));
                 break;
         }
-
     }
 }

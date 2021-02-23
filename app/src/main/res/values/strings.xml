@@ -141,4 +141,67 @@
     <string name="pula_brijunii">Pula - Brijuni</string>
     <string name="korkyra">Korkyra</string>
     <string name="brijuni_pula">Brijuni - Pula</string>
+    <string name="pula_ve">Pula - Venecija</string>
+    <string name="s_30">7:30</string>
+    <string name="_11_15">11:15</string>
+    <string name="ven_pula">Venecija - Pula</string>
+    <string name="aaavenecija">Venecija</string>
+    <string name="_17_15">17:15</string>
+    <string name="_20_30">20:30</string>
+    <string name="bunarina_otko_veruda">Bunarina - Otok Veruda</string>
+    <string name="pula_frat">Pula - Fratarski</string>
+    <string name="_9_00">9:00</string>
+    <string name="_9_10">9:10</string>
+    <string name="_10_10">10:10</string>
+    <string name="_11_00">11:00</string>
+    <string name="_11_10">11:10</string>
+    <string name="_12_10">12:10</string>
+
+    <string name="_13_00">13:00</string>
+    <string name="_13_10">13:10</string>
+    <string name="time2222">14:00</string>
+    <string name="_14_10">14:10</string>
+    <string name="_15_00">15:00</string>
+    <string name="_15_10">15:10</string>
+    <string name="_16_00">16:00</string>
+    <string name="_16_10">16:10</string>
+    <string name="_17_00">17:00</string>
+    <string name="_17_10">17:10</string>
+    <string name="_18_00">18:00</string>
+    <string name="_18_10">18:10</string>
+    <string name="_19_00">19:00</string>
+    <string name="_19_10">19:10</string>
+    <string name="_20_00">20:00</string>
+    <string name="_20_10">20:10</string>
+
+    <string name="_10_00">10:00</string>
+    <string name="_21_00">21:00</string>
+    <string name="fratarski_pula">Fratarski - Pula</string>
+    <string name="otok_veruda_bunarina">Otok Veruda - Bunarina</string>
+
+    <string name="_9_25">9:25</string>
+    <string name="_10_15">10:15</string>
+    <string name="_10_25">10:25</string>
+
+    <string name="_11_25">11:25</string>
+    <string name="_12_15">12:15</string>
+    <string name="_12_25">12:25</string>
+    <string name="_13_15">13:15</string>
+    <string name="_13_25">13:25</string>
+    <string name="_14_15">14:15</string>
+    <string name="_14_25">14:25</string>
+    <string name="_15_15">15:15</string>
+    <string name="_15_25">15:25</string>
+    <string name="_16_15">16:15</string>
+    <string name="_16_25">16:25</string>
+
+    <string name="_17_25">17:25</string>
+    <string name="_18_15">18:15</string>
+    <string name="_18_25">18:25</string>
+    <string name="_19_15">19:15</string>
+    <string name="_19_25">19:25</string>
+    <string name="_20_15">20:15</string>
+    <string name="_20_25">20:25</string>
+    <string name="_21_15">21:15</string>
+    <string name="_21_25">21:25</string>
 </resources>

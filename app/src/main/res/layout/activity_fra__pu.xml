@@ -6,7 +6,7 @@
     android:background="#4083A9"
     tools:context=".Pu_Zd">
     <RelativeLayout
-        android:id="@+id/pu_fr"
+        android:id="@+id/fr_pu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
@@ -15,7 +15,7 @@
             android:textSize="30sp"
             android:layout_marginTop="15dp"
             android:gravity="center"
-            android:text="@string/pula_frat"
+            android:text="@string/fratarski_pula"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -23,7 +23,7 @@
     </RelativeLayout>
     <RelativeLayout
         android:layout_marginTop="15dp"
-        android:layout_below="@id/pu_fr"
+        android:layout_below="@id/fr_pu"
         android:id="@+id/button_rel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -34,9 +34,9 @@
             android:layout_height="40dp"
             android:layout_alignParentStart="true"
             android:layout_marginStart="30dp"
-            android:background="@drawable/white_border"
+            android:background="@drawable/blue_border"
             android:text="@string/direction_a_btn1"
-            android:textColor="#4083A9">
+            android:textColor="@color/white">
 
         </Button>
 
@@ -48,9 +48,9 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="30dp"
             android:layout_toEndOf="@id/Dir_A"
-            android:background="@drawable/blue_border"
+            android:background="@drawable/white_border"
             android:text="@string/direction_b"
-            android:textColor="@color/white">
+            android:textColor="#4083A9">
 
         </Button>
     </RelativeLayout>
@@ -84,7 +84,7 @@
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/bunarina_otko_veruda"
+                    android:text="@string/otok_veruda_bunarina"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="20sp">
@@ -120,7 +120,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="5dp"
                     android:layout_toEndOf="@id/pol2"
-                    android:text="@string/_9_00">
+                    android:text="@string/_9_15">
 
                 </TextView>
                 <TextView
@@ -144,7 +144,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="20dp"
                     android:layout_toEndOf="@id/pol2"
-                    android:text="@string/_9_10">
+                    android:text="@string/_9_25">
 
                 </TextView>
 
@@ -187,7 +187,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="5dp"
                     android:layout_toEndOf="@id/polazak1"
-                    android:text="10:00">
+                    android:text="@string/_10_15">
 
                 </TextView>
                 <TextView
@@ -211,7 +211,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="20dp"
                     android:layout_toEndOf="@id/polazak1"
-                    android:text="@string/_10_10">
+                    android:text="@string/_10_25">
 
                 </TextView>
 
@@ -252,7 +252,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="5dp"
                     android:layout_toEndOf="@id/polazak2"
-                    android:text="@string/_11_00">
+                    android:text="@string/_11_15">
 
                 </TextView>
                 <TextView
@@ -276,7 +276,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="20dp"
                     android:layout_toEndOf="@id/polazak2"
-                    android:text="@string/_11_10">
+                    android:text="@string/_11_25">
 
                 </TextView>
 
@@ -317,7 +317,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="5dp"
                     android:layout_toEndOf="@id/polazak3"
-                    android:text="@string/_12_00">
+                    android:text="@string/_12_15">
 
                 </TextView>
                 <TextView
@@ -338,10 +338,10 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/li_3"
                     android:layout_marginStart="192dp"
-                    android:textColor="@color/black"
                     android:layout_marginTop="20dp"
                     android:layout_toEndOf="@id/polazak3"
-                    android:text="@string/_12_10">
+                    android:text="@string/_12_25"
+                    android:textColor="@color/black">
 
                 </TextView>
 
@@ -382,7 +382,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="5dp"
                     android:layout_toEndOf="@id/polazak4"
-                    android:text="@string/_13_00">
+                    android:text="@string/_13_15">
 
                 </TextView>
                 <TextView
@@ -406,7 +406,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="20dp"
                     android:layout_toEndOf="@id/polazak4"
-                    android:text="@string/_13_10">
+                    android:text="@string/_13_25">
 
                 </TextView>
 
@@ -448,7 +448,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="5dp"
                     android:layout_toEndOf="@id/polazak5"
-                    android:text="@string/time2222">
+                    android:text="@string/_14_15">
 
                 </TextView>
                 <TextView
@@ -472,7 +472,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="20dp"
                     android:layout_toEndOf="@id/polazak5"
-                    android:text="@string/_14_10">
+                    android:text="@string/_14_25">
 
                 </TextView>
 
@@ -513,7 +513,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="5dp"
                     android:layout_toEndOf="@id/polazak6"
-                    android:text="@string/_15_00">
+                    android:text="@string/_15_15">
 
                 </TextView>
                 <TextView
@@ -537,7 +537,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="20dp"
                     android:layout_toEndOf="@id/polazak6"
-                    android:text="@string/_15_10">
+                    android:text="@string/_15_25">
 
                 </TextView>
 
@@ -579,7 +579,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="5dp"
                     android:layout_toEndOf="@id/polazak7"
-                    android:text="@string/_16_00">
+                    android:text="@string/_16_15">
 
                 </TextView>
                 <TextView
@@ -603,7 +603,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="20dp"
                     android:layout_toEndOf="@id/polazak7"
-                    android:text="@string/_16_10">
+                    android:text="@string/_16_25">
 
                 </TextView>
 
@@ -644,7 +644,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="5dp"
                     android:layout_toEndOf="@id/polazak8"
-                    android:text="@string/_17_00">
+                    android:text="@string/_17_15">
 
                 </TextView>
                 <TextView
@@ -668,7 +668,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="20dp"
                     android:layout_toEndOf="@id/polazak8"
-                    android:text="@string/_17_10">
+                    android:text="@string/_17_25">
 
                 </TextView>
 
@@ -708,7 +708,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="5dp"
                     android:layout_toEndOf="@id/polazak9"
-                    android:text="@string/_18_00">
+                    android:text="@string/_18_15">
 
                 </TextView>
                 <TextView
@@ -732,7 +732,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="20dp"
                     android:layout_toEndOf="@id/polazak9"
-                    android:text="@string/_18_10">
+                    android:text="@string/_18_25">
 
                 </TextView>
 
@@ -773,7 +773,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="5dp"
                     android:layout_toEndOf="@id/polazak10"
-                    android:text="@string/_19_00">
+                    android:text="@string/_19_15">
 
                 </TextView>
                 <TextView
@@ -797,7 +797,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="20dp"
                     android:layout_toEndOf="@id/polazak10"
-                    android:text="@string/_19_10">
+                    android:text="@string/_19_25">
 
                 </TextView>
 
@@ -838,9 +838,10 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="5dp"
                     android:layout_toEndOf="@id/polazak11"
-                    android:text="@string/_20_00">
+                    android:text="@string/_20_15">
 
                 </TextView>
+
                 <TextView
                     android:id="@+id/dolazak11"
                     android:layout_marginStart="20dp"
@@ -862,7 +863,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="20dp"
                     android:layout_toEndOf="@id/polazak11"
-                    android:text="@string/_20_10">
+                    android:text="@string/_20_25">
 
                 </TextView>
 
@@ -903,7 +904,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="5dp"
                     android:layout_toEndOf="@id/polazak12"
-                    android:text="21:00">
+                    android:text="@string/_21_15">
 
                 </TextView>
                 <TextView
@@ -928,19 +929,12 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="20dp"
                     android:layout_toEndOf="@id/polazak12"
-                    android:text="@string/_21_00">
+                    android:text="@string/_21_25">
 
                 </TextView>
 
 
             </RelativeLayout>
-
-
-
-
-
-
-
 
 
         </RelativeLayout>
