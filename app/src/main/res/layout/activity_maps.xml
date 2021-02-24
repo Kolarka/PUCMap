@@ -12,19 +12,7 @@
         android:name="com.google.android.gms.maps.SupportMapFragment" />
 
 
-    <ImageView
-        android:id="@+id/image_view_gps_icon"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="360dp"
-        android:layout_marginEnd="25dp"
-        android:contentDescription="@string/gps"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_gps"
-        tools:visibility="visible">
 
-    </ImageView>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -54,7 +42,9 @@
             android:focusable="false"
             android:clickable="false"
             android:longClickable="false"
-            android:importantForAutofill="no" />
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            tools:ignore="LabelFor" />
 
         <ImageView
             android:layout_width="30dp"
