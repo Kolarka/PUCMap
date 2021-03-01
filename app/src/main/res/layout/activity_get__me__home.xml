@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Get_Me_Home">
 
     <RelativeLayout
@@ -11,22 +12,12 @@
         android:background="#F2994A"
         android:id="@+id/relLayout363">
 
-        <ImageButton
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
-            android:background="#F2994A"
-            android:src="@drawable/ic_next"
-            android:id="@+id/Im1"
-            tools:ignore="ContentDescription">
 
-
-        </ImageButton>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_toEndOf="@id/Im1"
+            android:layout_marginStart="20dp"
             android:text="@string/set_home"
             android:textSize="20sp"
             android:textColor="#fff"
@@ -44,27 +35,34 @@
         android:background="@color/white"
         android:layout_below="@id/relLayout363"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="500dp">
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:id="@+id/map_set_home"
+            android:name="com.google.android.gms.maps.SupportMapFragment" >
 
-        <AutoCompleteTextView
-            android:background="@color/white"
-            android:id="@+id/autoCompleteTextView"
-            android:layout_width="wrap_content"
+        </fragment>
+
+        <com.mancj.materialsearchbar.MaterialSearchBar
+            style="@style/MaterialSearchBarLight"
+            app:mt_speechMode="false"
+            app:mt_hint="Search home address"
+            app:mt_maxSuggestionsCount="10"
+            app:mt_navIconEnabled="true"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="" />
+            android:layout_margin="16dp"
+            android:elevation="5dp"
+            android:outlineProvider="bounds"
+            app:mt_placeholder="Search home address"
+            android:id="@+id/searchBar" />
     </RelativeLayout>
 
-    <fragment
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginTop="55dp"
-        android:id="@+id/map_set_home"
-        android:layout_below="@id/rel1234"
-        android:name="com.google.android.gms.maps.SupportMapFragment" >
 
-    </fragment>
     <RelativeLayout
-        android:layout_below="@id/map_set_home"
+        android:id="@+id/Use_curr_location"
+        android:layout_below="@id/rel1234"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
