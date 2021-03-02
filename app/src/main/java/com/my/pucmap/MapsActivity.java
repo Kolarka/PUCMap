@@ -12,6 +12,7 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.Looper;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
@@ -34,10 +35,16 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.Map;
 
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, View.OnClickListener {
 
+    private static final String TAG ="MapsActivity" ;
     private GoogleMap mMap;
     private ImageButton directions_bike;
     private ImageButton directions_bus;
@@ -64,6 +71,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         }
     };
+
+    //connect to Firestore
+    private final FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+    private final DocumentReference address_ref = db.collection("Address")
+            .document("Home address");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -298,6 +311,27 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
+    private void checkIfDatabaseIsEmpty(){
+        address_ref.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        Map<String, Object> map = document.getData();
+                        if (map.size() == 0) {
+                            Log.d(TAG, "Document is empty!");
+                            startActivity(new Intent(MapsActivity.this, Get_Me_Home.class));
+                        } else {
+                            Log.d(TAG, "Document is not empty!");
+                            startActivity(new Intent(MapsActivity.this, Map_Direction.class));
+                        }
+                    }
+                }
+            }
+        });
+    }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -317,7 +351,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 startActivity(new Intent(MapsActivity.this, Boat.class));
                 break;
             case R.id.get_me_home:
-                startActivity(new Intent(MapsActivity.this, Get_Me_Home.class));
+                checkIfDatabaseIsEmpty();
                 break;
             case R.id.get_me_work:
                 startActivity(new Intent(MapsActivity.this, Get_Me_Work.class));

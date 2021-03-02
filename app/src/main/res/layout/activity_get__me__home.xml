@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Get_Me_Home">
 
@@ -15,7 +16,7 @@
 
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginStart="20dp"
             android:text="@string/set_home"
@@ -29,16 +30,18 @@
         </TextView>
 
 
+
+
     </RelativeLayout>
     <RelativeLayout
         android:id="@+id/rel1234"
         android:background="@color/white"
         android:layout_below="@id/relLayout363"
         android:layout_width="match_parent"
-        android:layout_height="500dp">
+        android:layout_height="400dp">
         <fragment
             android:layout_width="match_parent"
-            android:layout_height="500dp"
+            android:layout_height="400dp"
             android:id="@+id/map_set_home"
             android:name="com.google.android.gms.maps.SupportMapFragment" >
 
@@ -61,6 +64,7 @@
 
 
     <RelativeLayout
+        android:background="@color/white"
         android:id="@+id/Use_curr_location"
         android:layout_below="@id/rel1234"
         android:layout_width="match_parent"
@@ -91,5 +95,32 @@
         </TextView>
 
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_gohome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_saveaddress"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/orange_border"
+        android:text="@string/go_home"
+        android:textColor="@color/white">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btn_saveaddress"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Use_curr_location"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+
+        android:background="@drawable/orange_border"
+        android:text="@string/save_address"
+        android:textColor="@color/white">
+
+    </Button>
 
 </RelativeLayout>

@@ -20,6 +20,7 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -56,6 +57,8 @@ import com.google.android.libraries.places.api.net.FindAutocompletePredictionsRe
 import com.google.android.libraries.places.api.net.PlacesClient;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.mancj.materialsearchbar.MaterialSearchBar;
 import com.mancj.materialsearchbar.adapter.SuggestionsAdapter;
 
@@ -66,11 +69,16 @@ import java.util.List;
 
 public class Get_Me_Home extends FragmentActivity implements OnMapReadyCallback, View.OnClickListener {
 
+    private static final String TAG = "Get me home";
     SupportMapFragment supportMapFragment;
     private GoogleMap mMap;
     private FusedLocationProviderClient fusedLocationProviderClient;
     private PlacesClient placesClient;
     private List<AutocompletePrediction> predictionList;
+    private Button goHome;
+    private Button SaveAddress;
+
+    private LatLng latLngOfPlace;
 
     private Location mLastKnownLocation;
     private LocationCallback locationCallback;
@@ -81,6 +89,14 @@ public class Get_Me_Home extends FragmentActivity implements OnMapReadyCallback,
     private final float DEFAULT_ZOOM = 18;
 
     private RelativeLayout use_current_location;
+
+    //connect to Firestore
+    private final FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+    private final DocumentReference address_ref = db.collection("Address")
+            .document("Home address");
+
+
 
 
     @Override
@@ -97,6 +113,14 @@ public class Get_Me_Home extends FragmentActivity implements OnMapReadyCallback,
 
         use_current_location = findViewById(R.id.Use_curr_location);
         use_current_location.setOnClickListener(this);
+
+        goHome = findViewById(R.id.btn_gohome);
+        goHome.setOnClickListener(this);
+
+        SaveAddress = findViewById(R.id.btn_saveaddress);
+        SaveAddress.setOnClickListener(this);
+
+
 
 
 
@@ -203,22 +227,13 @@ public class Get_Me_Home extends FragmentActivity implements OnMapReadyCallback,
                     public void onSuccess(FetchPlaceResponse fetchPlaceResponse) {
                         Place place = fetchPlaceResponse.getPlace();
                         Log.i("mytag", "Place found: " + place.getName());
-                        LatLng latLngOfPlace = place.getLatLng();
+                        latLngOfPlace = place.getLatLng();
                         if(latLngOfPlace!= null){
                             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLngOfPlace, DEFAULT_ZOOM));
 
+
                         }
-                        FirebaseDatabase.getInstance().getReference("Address")
-                                .setValue(latLngOfPlace).addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                if(task.isSuccessful()){
-                                    Toast.makeText(Get_Me_Home.this, "Location saved", Toast.LENGTH_SHORT);
-                                }else{
-                                    Toast.makeText(Get_Me_Home.this, "Location  not saved", Toast.LENGTH_SHORT);
-                            }
-                            }
-                        });
+
 
                     }
                 }).addOnFailureListener(new OnFailureListener() {
@@ -385,10 +400,53 @@ public class Get_Me_Home extends FragmentActivity implements OnMapReadyCallback,
 
     }
 
+    private void SaveAddress(){
+        if(latLngOfPlace != null){
+            address_ref.set(latLngOfPlace)
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            Toast.makeText(Get_Me_Home.this, "Success", Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Log.d(TAG, "On Failure: " + e.toString());
+                        }
+                    });
+
+        }else {
+            address_ref.set(mLastKnownLocation)
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            Toast.makeText(Get_Me_Home.this, "Success", Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Log.d(TAG, "On Failure: " + e.toString());
+                        }
+                    });
+
+        }
+    }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+
             case R.id.Use_curr_location:
+                getDeviceLocation();
+
+            case R.id.btn_saveaddress:
+                SaveAddress();
+
+            case R.id.btn_gohome:
+                startActivity(new Intent(Get_Me_Home.this, Map_Direction.class));
+
 
                 break;
         }
