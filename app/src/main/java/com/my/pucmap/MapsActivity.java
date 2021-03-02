@@ -78,6 +78,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private final DocumentReference address_ref = db.collection("Address")
             .document("Home address");
 
+    private final DocumentReference work_ref = db.collection("Address")
+            .document("Work address");
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -331,6 +335,30 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
     }
+    private void workDataEmpty(){
+        work_ref.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        Map<String, Object> map = document.getData();
+                        if (map.size() == 0) {
+                            Log.d(TAG, "Document is empty!");
+                            startActivity(new Intent(MapsActivity.this, Get_Me_Work.class));
+                        } else {
+                            Log.d(TAG, "Document is not empty!");
+                            startActivity(new Intent(MapsActivity.this, Map_Direction.class));
+                        }
+                    }
+                }
+            }
+        });
+
+    }
+
+
+
 
     @Override
     public void onClick(View v) {
@@ -354,7 +382,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 checkIfDatabaseIsEmpty();
                 break;
             case R.id.get_me_work:
-                startActivity(new Intent(MapsActivity.this, Get_Me_Work.class));
+                workDataEmpty();
                 break;
             case R.id.relLayout:
                 startActivity(new Intent(MapsActivity.this, Get_Me_Somewhere.class));

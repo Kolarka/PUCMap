@@ -206,4 +206,6 @@
     <string name="_21_25">21:25</string>
     <string name="go_home">GO HOME</string>
     <string name="save_address">SAVE ADDRESS</string>
+    <string name="set_work">Set Work</string>
+    <string name="go_to_work">GO TO WORK</string>
 </resources>
