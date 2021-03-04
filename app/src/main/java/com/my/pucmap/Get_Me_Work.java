@@ -433,9 +433,11 @@ public class Get_Me_Work extends FragmentActivity implements OnMapReadyCallback,
 
             case R.id.Use_curr_location:
                 getDeviceLocation();
+                break;
 
             case R.id.btn_saveaddress:
                 SaveAddress();
+                break;
 
             case R.id.btn_gowork:
                 startActivity(new Intent(Get_Me_Work.this, Map_Direction.class));

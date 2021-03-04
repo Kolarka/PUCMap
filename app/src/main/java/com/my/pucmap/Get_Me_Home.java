@@ -441,8 +441,11 @@ public class Get_Me_Home extends FragmentActivity implements OnMapReadyCallback,
             case R.id.Use_curr_location:
                 getDeviceLocation();
 
+                break;
+
             case R.id.btn_saveaddress:
                 SaveAddress();
+                break;
 
             case R.id.btn_gohome:
                 startActivity(new Intent(Get_Me_Home.this, Map_Direction.class));
