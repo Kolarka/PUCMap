@@ -16,6 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Zzz">
+        <activity android:name=".Get_Me_Somewhere_2"></activity>
         <activity android:name=".Map_Direction" />
         <activity android:name=".Fra_Pu" />
         <activity android:name=".Ve_Pu" />

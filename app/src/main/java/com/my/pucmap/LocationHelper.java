@@ -1,31 +1,25 @@
 package com.my.pucmap;
 
+import com.google.firebase.firestore.GeoPoint;
+import com.google.firebase.firestore.ServerTimestamp;
+
 public class LocationHelper {
 
-    private double Longitude;
-    private double Latitude;
+    private GeoPoint geoPoint;
 
     public LocationHelper() {
 
     }
-    public LocationHelper(double longitude, double latitude) {
-        Longitude = longitude;
-        Latitude = latitude;
+
+    public LocationHelper(GeoPoint geoPoint) {
+        this.geoPoint = geoPoint;
     }
 
-    public double getLongitude() {
-        return Longitude;
+    public GeoPoint getGeoPoint() {
+        return geoPoint;
     }
 
-    public void setLongitude(double longitude) {
-        Longitude = longitude;
-    }
-
-    public double getLatitude() {
-        return Latitude;
-    }
-
-    public void setLatitude(double latitude) {
-        Latitude = latitude;
+    public void setGeoPoint(GeoPoint geoPoint) {
+        this.geoPoint = geoPoint;
     }
 }

@@ -209,4 +209,7 @@
     <string name="set_work">Set Work</string>
     <string name="go_to_work">GO TO WORK</string>
     <string name="start">Start</string>
+    <string name="work">Work</string>
+    <string name="home">Home</string>
+    <string name="end">End</string>
 </resources>

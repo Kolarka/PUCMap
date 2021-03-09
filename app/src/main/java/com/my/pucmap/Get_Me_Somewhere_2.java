@@ -52,9 +52,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Get_Me_Somewhere extends FragmentActivity implements View.OnClickListener {
+public class Get_Me_Somewhere_2 extends FragmentActivity implements View.OnClickListener {
 
-    private static final String TAG = "Get me somewhere";
+    private static final String TAG = "Get me somewhere2";
     private FusedLocationProviderClient fusedLocationProviderClient;
     private RelativeLayout currentLocation;
     private RelativeLayout work;
@@ -75,13 +75,13 @@ public class Get_Me_Somewhere extends FragmentActivity implements View.OnClickLi
     private final FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     private final DocumentReference direction_ref = db.collection("Direction")
-            .document("Start");
+            .document("End");
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_get__me__somewhere);
+        setContentView(R.layout.activity_get__me__somewhere_2);
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
@@ -97,8 +97,8 @@ public class Get_Me_Somewhere extends FragmentActivity implements View.OnClickLi
         home.setOnClickListener(this);
 
 
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(Get_Me_Somewhere.this);
-        Places.initialize(Get_Me_Somewhere.this, "AIzaSyBZra3QIyw7cWk5FDkcW6T0PhnVVjYf85g");
+        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(Get_Me_Somewhere_2.this);
+        Places.initialize(Get_Me_Somewhere_2.this, "AIzaSyBZra3QIyw7cWk5FDkcW6T0PhnVVjYf85g");
         placesClient = Places.createClient(this);
         AutocompleteSessionToken token = AutocompleteSessionToken.newInstance();
 
@@ -205,7 +205,7 @@ public class Get_Me_Somewhere extends FragmentActivity implements View.OnClickLi
                                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override
                                         public void onSuccess(Void aVoid) {
-                                            Toast.makeText(Get_Me_Somewhere.this, "Success", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(Get_Me_Somewhere_2.this, "Success", Toast.LENGTH_SHORT).show();
                                         }
                                     })
                                     .addOnFailureListener(new OnFailureListener() {
@@ -215,7 +215,7 @@ public class Get_Me_Somewhere extends FragmentActivity implements View.OnClickLi
                                         }
                                     });
 
-                            startActivity(new Intent(Get_Me_Somewhere.this, Get_Me_Somewhere_2.class));
+                            startActivity(new Intent(Get_Me_Somewhere_2.this, Map_Direction.class));
 
 
 
@@ -266,7 +266,7 @@ public class Get_Me_Somewhere extends FragmentActivity implements View.OnClickLi
 
                 locationHelper.setGeoPoint(geoPoint);
 
-                }
+            }
         });
 
     }
@@ -293,7 +293,7 @@ public class Get_Me_Somewhere extends FragmentActivity implements View.OnClickLi
         switch (v.getId()){
             case R.id.curr_location:
                 currLocationClicked();
-                startActivity(new Intent(Get_Me_Somewhere.this, Get_Me_Somewhere_2.class));
+
 
                 break;
             case R.id.wor_relLay:
