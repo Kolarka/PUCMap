@@ -212,4 +212,8 @@
     <string name="work">Work</string>
     <string name="home">Home</string>
     <string name="end">End</string>
+    <string name="st">Start</string>
+    <string name="en">End</string>
+    <string name="veruda_ulica_pula">Veruda ulica Pula</string>
+    <string name="rovinjska_14_pula">Rovinjska 14 Pula</string>
 </resources>
