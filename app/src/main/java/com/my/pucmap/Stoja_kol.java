@@ -7,20 +7,36 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Stoja_kol extends FragmentActivity implements OnMapReadyCallback,
         GoogleMap.OnPolylineClickListener, View.OnClickListener{
 
     private final static int Greeen = 0xFF008000;
     private Button direction_a;
+    private GoogleMap sto_kol_map;
+
+    private LatLng Bus_station = new LatLng(44.87663061328511, 13.854614457951289);
+    private LatLng last_bus_station = new LatLng(44.860139532823084, 13.814604386658418);
+    private RelativeLayout first_station;
+
+    private MarkerOptions Bustation_option;
+    private MarkerOptions Last_Bus_station;
+
+    private List<MarkerOptions> markerOptionsList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +49,31 @@ public class Stoja_kol extends FragmentActivity implements OnMapReadyCallback,
 
         direction_a = findViewById(R.id.Dir_A);
         direction_a.setOnClickListener(this);
+        first_station = findViewById(R.id.rel_firststation);
+        first_station.setOnClickListener(this);
     }
     @Override
     public void onMapReady(GoogleMap googleMap) {
+         sto_kol_map = googleMap;
+        sto_kol_map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+
+
+        markerOptionsList = new ArrayList<>();
+
+        //bus station marker option
+        Bustation_option = new MarkerOptions().position(Bus_station)
+                .title("Bus station Pula")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_b));
+
+        markerOptionsList.add(Bustation_option);
+
+        Last_Bus_station = new MarkerOptions().position(last_bus_station)
+                .title("Bus station Pula")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_a));
+
+        markerOptionsList.add(Last_Bus_station);
+
+
         // Add polylines to the map.
         // Polylines are useful to show a route or some other connection between points.
         Polyline polyline1 = googleMap.addPolyline(new PolylineOptions()
@@ -139,6 +177,12 @@ public class Stoja_kol extends FragmentActivity implements OnMapReadyCallback,
         //camera in Pula
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(44.86025417118449, 13.814587465671368), 13));
 
+        for (MarkerOptions options : markerOptionsList){
+            LatLng latLng = new LatLng(options.getPosition().latitude, options.getPosition().longitude);
+            sto_kol_map.addMarker(options);
+
+        }
+
         // Set listeners for click events.
         googleMap.setOnPolylineClickListener(this);
 
@@ -154,6 +198,9 @@ public class Stoja_kol extends FragmentActivity implements OnMapReadyCallback,
         switch (v.getId()) {
             case R.id.Dir_A:
                 startActivity(new Intent(Stoja_kol.this, Kol_stoja.class));
+                break;
+            case R.id.rel_firststation:
+                sto_kol_map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(44.860139532823084, 13.814604386658418), 16));
                 break;
         }
 

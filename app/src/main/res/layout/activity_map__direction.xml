@@ -16,7 +16,7 @@
             android:layout_width="350dp"
             android:layout_height="40dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/white_border">
 
             <TextView
@@ -38,25 +38,30 @@
                 android:layout_toEndOf="@id/txt_start1"
                 android:src="@drawable/ic_baseline_location_on_24"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/location">
 
             </ImageView>
 
-            <TextView
+
+            <EditText
                 android:textSize="15sp"
                 android:layout_marginStart="15dp"
-                android:hint="@string/veruda_ulica_pula"
                 android:layout_centerVertical="true"
-                android:layout_toEndOf="@id/im_loc1"
-                android:id="@+id/location_start"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-            </TextView>
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/im_loc1"
+                android:id="@+id/etOrigin"
+                android:textColorHint="@color/quantum_grey"
+                android:hint="@string/where_are_you_coming_from"
+                android:inputType="textPostalAddress"
+                 />
 
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/end_relLay"
             android:layout_below="@id/text_view1"
             android:layout_width="350dp"
             android:layout_height="40dp"
@@ -85,31 +90,78 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginBottom="8dp"
                 android:layout_toEndOf="@id/end_txt"
-                android:src="@drawable/ic_baseline_location_on_24">
+                android:src="@drawable/ic_baseline_location_on_24"
+                android:contentDescription="@string/location">
 
             </ImageView>
-            <TextView
+
+
+            <EditText
                 android:textSize="15sp"
+                android:textColor="@color/black"
                 android:layout_marginStart="15dp"
-                android:hint="@string/rovinjska_14_pula"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@id/im_location_2"
-                android:id="@+id/location_end"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-            </TextView>
+                android:hint="@string/where_are_you_going"
+                android:textColorHint="@color/quantum_grey"
+                android:id="@+id/etDestination"
+                android:inputType="textPostalAddress"
+              />
 
         </RelativeLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_below="@id/end_relLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/find_path"
+                android:id="@+id/btnFindPath" />
+            <ImageView
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_distance"
+                android:contentDescription="@string/distance" />
+            <TextView
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_0_km"
+                android:id="@+id/tvDistance" />
+
+            <ImageView
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_clock"
+                android:contentDescription="@string/clock" />
+            <TextView
+                android:layout_marginStart="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_0_min"
+                android:id="@+id/tvDuration" />
+        </LinearLayout>
 
     </RelativeLayout>
     <fragment
         android:layout_below="@id/relley_1"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/map_mapDir"
-        android:name="com.google.android.gms.maps.SupportMapFragment" >
+        android:layout_height="match_parent" />
 
-    </fragment>
 
 </RelativeLayout>

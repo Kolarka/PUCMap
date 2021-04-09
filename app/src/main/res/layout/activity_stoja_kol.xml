@@ -69,11 +69,11 @@
         android:id="@+id/map_stojkol"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="300dp">
+        android:layout_height="400dp">
 
     </fragment>
     <RelativeLayout
-        android:id="@+id/rel_firststat"
+        android:id="@+id/rel_firststation"
         android:background="@color/white"
         android:layout_below="@id/map_stojkol"
         android:layout_width="match_parent"
@@ -108,7 +108,7 @@
 
     </RelativeLayout>
     <RelativeLayout
-        android:layout_below="@id/rel_firststat"
+        android:layout_below="@id/rel_firststation"
         android:layout_marginTop="2dp"
         android:background="@color/white"
         android:id="@+id/rel_lay_direct"

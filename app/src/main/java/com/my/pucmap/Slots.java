@@ -1,7 +1,10 @@
 package com.my.pucmap;
 
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -108,6 +111,11 @@ public class Slots extends FragmentActivity implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
         slotMap = googleMap;
         slotMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
+        slotMap.setMyLocationEnabled(true);
 
 
         markerOptionsList = new ArrayList<>();

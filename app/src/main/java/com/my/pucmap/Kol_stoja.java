@@ -32,11 +32,13 @@ public class Kol_stoja extends FragmentActivity implements OnMapReadyCallback,
     private GoogleMap kol_sto_map;
     private final static int Greeen = 0xFF008000;
     private Button direction_b;
-    private LatLng Bus_station = new LatLng(44.87697273602289, 13.85445352541264);
+    private LatLng Bus_station = new LatLng(44.87663061328511, 13.854614457951289);
+    private LatLng last_bus_station = new LatLng(44.860139532823084, 13.814604386658418);
     private RelativeLayout first_station;
 
 
     private MarkerOptions Bustation_option;
+    private MarkerOptions Last_Bus_station;
 
     private List<MarkerOptions> markerOptionsList;
 
@@ -64,12 +66,19 @@ public class Kol_stoja extends FragmentActivity implements OnMapReadyCallback,
 
         markerOptionsList = new ArrayList<>();
 
-        //green option parking slot
+        //bus station marker option
         Bustation_option = new MarkerOptions().position(Bus_station)
                 .title("Bus station Pula")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_a));
 
         markerOptionsList.add(Bustation_option);
+
+        Last_Bus_station = new MarkerOptions().position(last_bus_station)
+                .title("Bus station Pula")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_b));
+
+        markerOptionsList.add(Last_Bus_station);
+
         // Add polylines to the map.
         // Polylines are useful to show a route or some other connection between points.
         Polyline polyline1 = googleMap.addPolyline(new PolylineOptions()
@@ -196,7 +205,7 @@ public class Kol_stoja extends FragmentActivity implements OnMapReadyCallback,
                 startActivity(new Intent(Kol_stoja.this, Stoja_kol.class));
                 break;
             case R.id.rel_firststat:
-                kol_sto_map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(44.87701074953485, 13.854464254248551), 16));
+                kol_sto_map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(44.87663061328511, 13.854614457951289), 16));
                 break;
         }
 

@@ -1,9 +1,12 @@
 package com.my.pucmap;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -45,6 +48,11 @@ public class Parking extends FragmentActivity implements View.OnClickListener, O
     @Override
     public void onMapReady(GoogleMap googleMap) {
         parking_map = googleMap;
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
+        parking_map.setMyLocationEnabled(true);
 
         // Add a marker in Sydney and move the camera
         LatLng pula = new LatLng(44.86726450096342, 13.850460687162476);

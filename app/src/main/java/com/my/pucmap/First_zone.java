@@ -1,8 +1,11 @@
 package com.my.pucmap;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -14,7 +17,7 @@ import com.google.android.gms.maps.model.Polygon;
 import com.google.android.gms.maps.model.PolygonOptions;
 import com.google.android.gms.maps.model.Polyline;
 
-public class First_zone extends AppCompatActivity implements OnMapReadyCallback,
+public class First_zone extends FragmentActivity implements OnMapReadyCallback,
         GoogleMap.OnPolylineClickListener, GoogleMap.OnPolygonClickListener{
 
     private static  final int COLOR_RED = 0xFFFF0000;
@@ -32,6 +35,11 @@ public class First_zone extends AppCompatActivity implements OnMapReadyCallback,
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
+        googleMap.setMyLocationEnabled(true);
+
         // Polygons for  parking spots in zone one
         Polygon polygon1 = googleMap.addPolygon(new PolygonOptions()
                 .fillColor(RED_TRANS)

@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.os.Looper;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 
@@ -54,6 +55,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private RelativeLayout get_home;
     private RelativeLayout get_work;
     private RelativeLayout get_me_some;
+    private EditText get_me_somewhere;
     int LOCATION_REQUEST_CODE = 20202;
     View mapView;
 
@@ -108,6 +110,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         get_work.setOnClickListener(this);
         get_me_some = findViewById(R.id.relLayout);
         get_me_some.setOnClickListener(this);
+        get_me_somewhere= findViewById(R.id.get_me_somewhere_search);
+        get_me_somewhere.setOnClickListener(this);
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         locationRequest = LocationRequest.create();
@@ -367,7 +371,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 workDataEmpty();
                 break;
             case R.id.relLayout:
-                startActivity(new Intent(MapsActivity.this, Get_Me_Somewhere.class));
+
+            case R.id.get_me_somewhere_search:
+                startActivity(new Intent(MapsActivity.this, Map_Direction.class));
                 break;
 
 

@@ -1,8 +1,11 @@
 package com.my.pucmap;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -16,7 +19,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Bike extends FragmentActivity implements OnMapReadyCallback{
+public class Bike extends FragmentActivity implements OnMapReadyCallback {
     private GoogleMap bike_map;
     private LatLng rent1 = new LatLng(44.87238925238926, 13.850799480767304);
     private LatLng rent2 = new LatLng(44.872371194523964, 13.849194178676013);
@@ -25,7 +28,6 @@ public class Bike extends FragmentActivity implements OnMapReadyCallback{
     private LatLng rent5 = new LatLng(44.862840127791856, 13.860556686639796);
     private LatLng rent6 = new LatLng(44.87005831529066, 13.848961497063426);
     private LatLng rent7 = new LatLng(44.8676341355889, 13.84790805945053);
-
 
 
     private MarkerOptions ren1_option;
@@ -53,6 +55,11 @@ public class Bike extends FragmentActivity implements OnMapReadyCallback{
     public void onMapReady(GoogleMap googleMap) {
         bike_map = googleMap;
         bike_map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
+        bike_map.setMyLocationEnabled(true);
 
 
         markerOptionsList = new ArrayList<>();

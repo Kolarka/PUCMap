@@ -16,7 +16,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Zzz">
-        <activity android:name=".Get_Me_Somewhere_2"></activity>
         <activity android:name=".Map_Direction" />
         <activity android:name=".Fra_Pu" />
         <activity android:name=".Ve_Pu" />
@@ -29,7 +28,6 @@
         <activity android:name=".Stoja_kol" />
         <activity android:name=".Kol_Verudela" />
         <activity android:name=".Kol_stoja" />
-        <activity android:name=".Get_Me_Somewhere" />
         <activity android:name=".Get_Me_Work" />
         <activity android:name=".Get_Me_Home" />
         <activity android:name=".Slots" />

@@ -216,4 +216,12 @@
     <string name="en">End</string>
     <string name="veruda_ulica_pula">Veruda ulica Pula</string>
     <string name="rovinjska_14_pula">Rovinjska 14 Pula</string>
+    <string name="where_are_you_coming_from">Where are you coming from?</string>
+    <string name="where_are_you_going">Where are you going?</string>
+    <string name="_0_min">0 min</string>
+    <string name="_0_km">0 km</string>
+    <string name="clock">clock</string>
+    <string name="distance">distance</string>
+    <string name="find_path">Find path</string>
+    <string name="location">location</string>
 </resources>
