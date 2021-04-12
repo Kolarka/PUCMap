@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">PUCMap</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps">PUCMap</string>
     <string name="get_me_home">Get Me Home</string>
     <string name="get_me_to_work">Get Me to Work</string>
     <string name="bike_button">Bike button</string>

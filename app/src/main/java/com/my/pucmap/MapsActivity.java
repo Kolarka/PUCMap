@@ -300,6 +300,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private void zoomTooUserLocation(){
 
     }
+    /*
 
     private void checkIfDatabaseIsEmpty(){
         address_ref.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -343,7 +344,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-
+*/
 
 
     @Override
@@ -365,10 +366,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 startActivity(new Intent(MapsActivity.this, Boat.class));
                 break;
             case R.id.get_me_home:
-                checkIfDatabaseIsEmpty();
+              //  checkIfDatabaseIsEmpty();
+                startActivity(new Intent(MapsActivity.this, Get_Me_Home.class));
                 break;
             case R.id.get_me_work:
-                workDataEmpty();
+            //    workDataEmpty();
+                startActivity(new Intent(MapsActivity.this, Get_Me_Work.class));
                 break;
             case R.id.relLayout:
 
